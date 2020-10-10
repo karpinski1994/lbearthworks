@@ -1,5 +1,5 @@
 module.exports = {
-  title: "Lb roboty ziemne, transport",
+  title: "roboty ziemne, transport",
   keywords: [
     "roboty ziemne",
     "transport",
