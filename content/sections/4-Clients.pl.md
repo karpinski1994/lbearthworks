@@ -9,14 +9,6 @@ clients: [
   {
     imageFileName: "logos/kamieniarstwo-prekambr.png",
     href: "#!"
-  },
-  {
-    imageFileName: "logos/colas.png",
-    href: "#!"
-  },
-  {
-    imageFileName: "logos/kamieniarstwo-prekambr.png",
-    href: "#!"
-  },
+  }
 ]
 ---
