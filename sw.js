@@ -27,17 +27,17 @@ workbox.core.clientsClaim();
  */
 self.__precacheManifest = [
   {
-    "url": "webpack-runtime-942c8d961c7a4e548236.js"
+    "url": "webpack-runtime-05281bc7220f299c5f39.js"
   },
   {
     "url": "framework-f045dbe50023c9eeb99e.js"
   },
   {
-    "url": "app-c82635f4ae9a43e2462e.js"
+    "url": "app-5b209f67921200294bd8.js"
   },
   {
     "url": "offline-plugin-app-shell-fallback/index.html",
-    "revision": "30da55b3eefc47e2d45066bed5656059"
+    "revision": "38c48c094dd5b2e54006eeaff21efa7e"
   },
   {
     "url": "google-fonts/s/droidserif/v12/tDbI2oqRg1oM3QBjjcaDkOr9rAU.woff2",
@@ -104,11 +104,11 @@ self.__precacheManifest = [
   },
   {
     "url": "page-data/app-data.json",
-    "revision": "9325bb8eb2ec7479bb68837344d58579"
+    "revision": "4835c3645e3fe998b521202c78c3d80c"
   },
   {
     "url": "manifest.webmanifest",
-    "revision": "c8438aeac6ffb3d1b95af17ae06d6aff"
+    "revision": "8b3d19db8602698e982ca0adc4e16bc5"
   }
 ].concat(self.__precacheManifest || []);
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
@@ -201,7 +201,7 @@ const navigationRoute = new NavigationRoute(async ({ event }) => {
   // Check for resources + the app bundle
   // The latter may not exist if the SW is updating to a new version
   const resources = await idbKeyval.get(`resources:${pathname}`)
-  if (!resources || !(await caches.match(`/lbearthworks/app-c82635f4ae9a43e2462e.js`))) {
+  if (!resources || !(await caches.match(`/lbearthworks/app-5b209f67921200294bd8.js`))) {
     return await fetch(event.request)
   }
 
