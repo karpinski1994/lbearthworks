@@ -20,7 +20,7 @@ module.exports = {
       resolve: "gatsby-plugin-manifest",
       options: {
         name: title,
-        short_name: "Agency",
+        short_name: "Lb",
         start_url: "/",
         background_color: "#212121",
         theme_color: "#fed136",

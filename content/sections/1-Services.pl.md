@@ -9,8 +9,6 @@ services: [
     content: "",
     services: [
       'Materiałów sypkich',
-      'Czegoś tam',
-      'Innych rzeczy'
     ]
   },
   {

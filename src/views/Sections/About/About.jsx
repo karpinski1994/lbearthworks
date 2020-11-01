@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-
+import shortid from "shortid";
 import { Row, Col } from "react-bootstrap";
 import TeamMember from "components/TeamMember";
 import SectionHeader from "components/SectionHeader";
@@ -28,7 +28,7 @@ const About = ({ className, frontmatter }) => {
       </Row>
       <Row>
         {teamMember.map(({ header, ...tmProps }) => (
-          <Col lg={3} key={header}>
+          <Col lg={3} key={shortid.generate()}>
             <TeamMember header={header} {...tmProps} />
           </Col>
         ))}

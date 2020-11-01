@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import clsx from "clsx";
-
+import shortid from "shortid";
 import { Row, Col } from "react-bootstrap";
 import PageSection from "components/PageSection";
 import SectionHeader from "components/SectionHeader";
@@ -21,7 +21,7 @@ const Clients = ({ className, frontmatter }) => {
       </Row>
       <Row>
         {clients.map(({ href, imageFileName }) => (
-          <Col md={3} sm={3} className="my-3" key={imageFileName}>
+          <Col md={3} sm={3} className="my-3" key={shortid.generate()}>
             <Client href={href} imageFileName={imageFileName} />
           </Col>
         ))}

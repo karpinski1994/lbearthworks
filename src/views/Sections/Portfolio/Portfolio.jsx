@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import clsx from "clsx";
-
+import shortid from "shortid";
 import { Row } from "react-bootstrap";
 import SectionHeader from "components/SectionHeader";
 import PortfolioItem from "components/PortfolioItem";
@@ -24,7 +24,7 @@ const Portfolio = ({ className, frontmatter }) => {
         {portfolios.map(
           ({ content, extraInfo, header, imageFileName, imageFileNameDetail, subheader }) => (
             <PortfolioItem
-              key={header}
+              key={shortid.generate()}
               imageFileName={imageFileName}
               header={header}
               subheader={subheader}
