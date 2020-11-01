@@ -57,6 +57,7 @@
     "eslint-plugin-react": "^7.19.0",
     "eslint-plugin-react-hooks": "^3.0.0",
     "gatsby-plugin-eslint": "^2.0.8",
+    "gh-pages": "^3.1.0",
     "prettier": "^2.0.4"
   },
   "homepage": "https://thundermiracle.github.io/gatsby-startbootstrap-agency",
@@ -84,6 +85,7 @@
     "serve": "gatsby serve",
     "eslint": "eslint ./src",
     "test": "cross-env NODE_ENV=test yarn run eslint",
-    "testbuild": "yarn test && yarn build"
+    "testbuild": "yarn test && yarn build",
+    "deploy": "gatsby build --prefix-paths && gh-pages -d public"
   }
 }

@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 import "./ServicesPoints.scss";
 
 const ServicesPoints = ({ services }) =>
+  services &&
   services.map((service) => (
     <h5 className="service-point" key={service}>
       {service}
