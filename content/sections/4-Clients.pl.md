@@ -4,11 +4,11 @@ subheader: ""
 clients: [
   {
     imageFileName: "logos/colas.png",
-    href: "#!"
+    href: "https://colas.pl/"
   },
   {
     imageFileName: "logos/kamieniarstwo-prekambr.png",
-    href: "#!"
+    href: "https://kamieniarstwoprekambr.pl/"
   }
 ]
 ---
