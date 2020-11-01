@@ -27,17 +27,33 @@ workbox.core.clientsClaim();
  */
 self.__precacheManifest = [
   {
-    "url": "webpack-runtime-e40605397d8bdb31cc0b.js"
+    "url": "webpack-runtime-942c8d961c7a4e548236.js"
   },
   {
     "url": "framework-f045dbe50023c9eeb99e.js"
   },
   {
-    "url": "app-7a8a8a07b66f7bdac97e.js"
+    "url": "app-c82635f4ae9a43e2462e.js"
   },
   {
     "url": "offline-plugin-app-shell-fallback/index.html",
-    "revision": "eff6df963a30e75c44897631dfc2d535"
+    "revision": "30da55b3eefc47e2d45066bed5656059"
+  },
+  {
+    "url": "google-fonts/s/droidserif/v12/tDbI2oqRg1oM3QBjjcaDkOr9rAU.woff2",
+    "revision": "62b4ed3cb1a22974f1a1b14a45ebb76e"
+  },
+  {
+    "url": "google-fonts/s/droidserif/v12/tDbK2oqRg1oM3QBjjcaDkOr4nAfcHg.woff2",
+    "revision": "847076af0a2064282724f913e8443124"
+  },
+  {
+    "url": "google-fonts/s/droidserif/v12/tDbV2oqRg1oM3QBjjcaDkOJGiRD7OwE.woff2",
+    "revision": "c914631f20a99ca0d322d775090ea4f7"
+  },
+  {
+    "url": "google-fonts/s/droidserif/v12/tDbX2oqRg1oM3QBjjcaDkOr4lLz5CwOnSA.woff2",
+    "revision": "21b7bed43e1c81de0277b6e2e96e9981"
   },
   {
     "url": "google-fonts/s/droidserif/v13/tDbI2oqRg1oM3QBjjcaDkOr9rAU.woff2",
@@ -56,8 +72,20 @@ self.__precacheManifest = [
     "revision": "21b7bed43e1c81de0277b6e2e96e9981"
   },
   {
+    "url": "google-fonts/s/kaushanscript/v8/vm8vdRfvXFLG3OLnsO15WYS5DG74wNI.woff2",
+    "revision": "e2ea67e80b95334da4768bffdf3d4f9d"
+  },
+  {
     "url": "google-fonts/s/kaushanscript/v9/vm8vdRfvXFLG3OLnsO15WYS5DG74wNI.woff2",
     "revision": "e2ea67e80b95334da4768bffdf3d4f9d"
+  },
+  {
+    "url": "google-fonts/s/montserrat/v14/JTURjIg1_i6t8kCHKm45_dJE3gnD_g.woff2",
+    "revision": "39d93cf678c740f9f6b2b1cfde34bee3"
+  },
+  {
+    "url": "google-fonts/s/montserrat/v14/JTUSjIg1_i6t8kCHKm459Wlhyw.woff2",
+    "revision": "bc3aa95dca08f5fee5291e34959c27bc"
   },
   {
     "url": "google-fonts/s/montserrat/v15/JTURjIg1_i6t8kCHKm45_dJE3gnD_g.woff2",
@@ -76,11 +104,11 @@ self.__precacheManifest = [
   },
   {
     "url": "page-data/app-data.json",
-    "revision": "8ff2be518414944cde8e9b6e37da83ba"
+    "revision": "9325bb8eb2ec7479bb68837344d58579"
   },
   {
     "url": "manifest.webmanifest",
-    "revision": "84809fb829d1e81289312fe99fa8b0e9"
+    "revision": "c8438aeac6ffb3d1b95af17ae06d6aff"
   }
 ].concat(self.__precacheManifest || []);
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
@@ -168,12 +196,12 @@ const navigationRoute = new NavigationRoute(async ({ event }) => {
   lastNavigationRequest = event.request.url
 
   let { pathname } = new URL(event.request.url)
-  pathname = pathname.replace(new RegExp(`^`), ``)
+  pathname = pathname.replace(new RegExp(`^/lbearthworks`), ``)
 
   // Check for resources + the app bundle
   // The latter may not exist if the SW is updating to a new version
   const resources = await idbKeyval.get(`resources:${pathname}`)
-  if (!resources || !(await caches.match(`/app-7a8a8a07b66f7bdac97e.js`))) {
+  if (!resources || !(await caches.match(`/lbearthworks/app-c82635f4ae9a43e2462e.js`))) {
     return await fetch(event.request)
   }
 
@@ -186,7 +214,7 @@ const navigationRoute = new NavigationRoute(async ({ event }) => {
     }
   }
 
-  const offlineShell = `/offline-plugin-app-shell-fallback/index.html`
+  const offlineShell = `/lbearthworks/offline-plugin-app-shell-fallback/index.html`
   const offlineShellWithKey = workbox.precaching.getCacheKeyForURL(offlineShell)
   return await caches.match(offlineShellWithKey)
 })
