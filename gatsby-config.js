@@ -24,7 +24,7 @@ module.exports = {
         background_color: "#212121",
         theme_color: "#fed136",
         display: "minimal-ui",
-        icon: "content/assets/gatsby-icon.png",
+        icon: "content/assets/lb-logo.jpg",
       },
     },
     "gatsby-transformer-remark",
